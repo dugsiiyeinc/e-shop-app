@@ -1,0 +1,2 @@
+let productsGrid = querySelector("#productsGrid");
+

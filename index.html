@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- JavaScript files -->
+   
+   
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <h1 class="logo">Modern Shop</h1>
+        <div class="nav-right">
+          <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search products...">
+          </div>
+          <div class="category-filter">
+            <select id="categoryFilter">
+              <option value="">All Categories</option>
+            </select>
+          </div>
+          <button class="cart-btn" id="cartBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+          <div class="auth-section" id="authSection">
+            <button class="sign-in-btn" id="signInBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+              <span>Sign In</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="products-grid" id="productsGrid">
+
+        <!-- Products will be inserted here -->
+
+      </div>
+    </main>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeAuthModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <h2 id="authTitle">Welcome Back!</h2>
+        <form id="authForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+          </div>
+          <button type="submit" class="submit-btn">Sign In</button>
+        </form>
+        <p class="auth-switch">
+          Don't have an account? <button id="authSwitchBtn">Sign Up</button>
+        </p>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeCartModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <h2>Your Cart</h2>
+        <div id="cartItems" class="cart-items">
+          <!-- Cart items will be inserted here -->
+        </div>
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
